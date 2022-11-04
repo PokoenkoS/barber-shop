@@ -1,0 +1,51 @@
+.main{
+    display: flex;
+    background-color: aqua;
+    justify-content: space-between;
+    
+}
+.header-nav {
+    display: flex;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+}
+.nav-list {
+    display: flex;
+    margin-left: 100px;
+   
+}
+.nav-link {
+    color: var(--white-text-color);
+    padding-top: 52px;
+}
+.nav-item:not(:last-child) {
+    margin-right: 30px;
+}
+.nav-list .nav-link:hover,
+.nav-list .nav-link:focus {
+    color: var(--hover-color)
+}
+.contact-list {
+    display: flex;
+    margin-left: 254px;
+}
+
+.contact-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.tel {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white-text-color);
+    padding-top: 52px;
+}
+.contact-list .tel:hover,
+.contact-list .tel:focus {
+    color: var(--hover-color);
+}

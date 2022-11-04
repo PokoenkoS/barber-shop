@@ -13,30 +13,55 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/main.min.css">
   
   </head>
   <body>
     <!--Хедер-->
-    <header>
+    <header class="header">
       <div class="container main">
-        <a href="">
-          <img src="/img/Logo (1).svg" alt="Logo" class="logo" />
+        <a href="./index.html">
+          <svg class="logo">
+            <use href="./img/icons.svg#icon-logo" ></use>
+          </svg>
         </a>
-        <nav class="header-nav">
-          <ul class="nav-list list">
-            <li class="nav-item"><a href="" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Services and prices</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Barbers</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Contacts</a></li>
+         
+        <button type="button" 
+            class="header-button js-open-menu" 
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+              >
+              <svg
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            </button>
+        <div class="header-menu">
+          <nav class="header-nav">
+            <ul class="nav-list list">
+              <li class="nav-item"><a href="" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="" class="nav-link">Services and prices</a></li>
+              <li class="nav-item"><a href="" class="nav-link">Barbers</a></li>
+              <li class="nav-item"><a href="" class="nav-link">Contacts</a></li>
+            </ul>
+          </nav>
+          
+          <ul class="contact-list list">
+            <li class="contact-item"><a href="tel:+380441111111" class="tel">+38 044 111 11 11</a></li>
+            <li class="contact-item"><button type="button" class="btn-contact">Online-booking</button></li>
           </ul>
-        </nav>
+        </div>
+             
         
-        <ul>
-          <li><a href="tel:+380441111111">+38 044 111 11 11</a></li>
-          <li><button type="button">Online-booking</button></li>
-        </ul>
-                 
       </div>
     </header>
     <!-- Maine -->
@@ -218,6 +243,41 @@
     <p>Every day from 9:00 to 22:00</p>
    </section>
     </main>
+    <!-- Mobile window -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="header-button js-close-menu">
+        <svg
+        fill="#212121"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        >
+        <path
+          fill-rule="evenodd"
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clip-rule="evenodd"
+        ></path>
+        </svg>
+        </button>
+        <ul>
+          <li><a href="">About</a></li>
+          <li><a href="">Services and prices</a></li>
+          <li><a href="">Barbers</a></li>
+          <li><a href="">Contacts</a></li>
+        </ul>
+      
+      
+      <ul>
+        <li><a href="tel:+380441111111" >+38 044 111 11 11</a></li>
+        <li><button type="button">Online-booking</button></li>
+      </ul>
+      <ul class="list">
+        <li>
+          <a href="" rel="noopener nore refferer nofferer">Instagram</a>
+        </li>
+        <li><a href="" rel="noopener nore refferer nofferer">Youtube</a></li>
+      </ul>
     <!-- footer -->
     <footer>
         <p>&#169;Copyright 2020</p>
@@ -228,5 +288,13 @@
             <li><a href="" rel="noopener nore refferer nofferer">Youtube</a></li>
           </ul>
     </footer>
+    <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

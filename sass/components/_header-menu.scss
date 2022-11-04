@@ -1,0 +1,10 @@
+.header-menu {
+    display: flex;
+}
+
+@media (max-width: 767px) {
+    .header-menu {
+      display: none;
+    }
+  }
+  
